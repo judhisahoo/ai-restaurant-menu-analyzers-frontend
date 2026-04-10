@@ -1,35 +1,53 @@
 {
   "expo": {
-    "name": "frontend",
-    "slug": "frontend",
+    "name": "Smart Menu Analyzer",
+    "slug": "smart-menu-analyzer",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#C8E6FA"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.smartmenu.analyzer"
     },
     "android": {
+      "package": "com.smartmenu.analyzer",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#C8E6FA"
       },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false,
       "permissions": [
         "android.permission.ACCESS_FINE_LOCATION",
         "android.permission.ACCESS_COARSE_LOCATION",
-        "android.permission.CAMERA"
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
       ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-web-browser",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Smart Menu Analyzer needs access to your photos to scan restaurant menus.",
+          "cameraPermission": "Smart Menu Analyzer needs camera access to scan restaurant menus."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Smart Menu Analyzer uses your location to find nearby restaurants.",
+          "locationWhenInUsePermission": "Smart Menu Analyzer uses your location to find nearby restaurants."
+        }
+      ]
+    ]
   }
 }
