@@ -11,7 +11,8 @@
     "build:android:release": "cd android && gradlew assembleRelease",
     "install:debug": "node scripts/installDebug.js",
     "install:release": "node scripts/installRelease.js",
-    "eas:android:dev": "npx eas-cli build --platform android --profile development"
+    "eas:android:dev": "npx eas-cli build --platform android --profile development",
+    "eas:android:preview": "npx eas-cli build --platform android --profile preview"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.4",
