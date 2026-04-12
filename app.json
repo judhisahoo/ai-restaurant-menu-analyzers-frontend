@@ -26,14 +26,14 @@
         "android.permission.ACCESS_COARSE_LOCATION",
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
-        "android.permission.WRITE_EXTERNAL_STORAGE"
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
       ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-web-browser",
       [
         "expo-image-picker",
         {
@@ -47,7 +47,13 @@
           "locationAlwaysAndWhenInUsePermission": "Smart Menu Analyzer uses your location to find nearby restaurants.",
           "locationWhenInUsePermission": "Smart Menu Analyzer uses your location to find nearby restaurants."
         }
-      ]
-    ]
+      ],
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8e736756-b5cb-4704-b1dd-6d956339481b"
+      }
+    }
   }
 }

@@ -10,7 +10,8 @@
     "build:android:debug": "cd android && gradlew assembleDebug",
     "build:android:release": "cd android && gradlew assembleRelease",
     "install:debug": "node scripts/installDebug.js",
-    "install:release": "node scripts/installRelease.js"
+    "install:release": "node scripts/installRelease.js",
+    "eas:android:dev": "npx eas-cli build --platform android --profile development"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.4",
@@ -18,8 +19,10 @@
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/stack": "^6.4.1",
     "expo": "~51.0.39",
-    "expo-application": "~5.9.4",
-    "expo-image-picker": "~15.0.7",
+    "expo-application": "~5.9.1",
+    "expo-dev-client": "~4.0.29",
+    "expo-font": "~12.0.10",
+    "expo-image-picker": "~15.1.0",
     "expo-location": "~17.0.1",
     "expo-status-bar": "~1.12.1",
     "expo-web-browser": "~13.0.3",
@@ -33,7 +36,7 @@
     "@babel/core": "^7.24.0",
     "@types/react": "~18.2.79",
     "babel-preset-expo": "~11.0.15",
-    "typescript": "^5.3.3"
+    "typescript": "~5.3.3"
   },
   "private": true
 }
